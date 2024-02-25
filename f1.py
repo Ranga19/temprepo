@@ -1,4 +1,4 @@
 def helloworld(str):
     print(str)
 
-helloworld('print')
+helloworld('hi ranganath')
