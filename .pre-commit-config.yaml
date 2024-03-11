@@ -12,4 +12,4 @@ repos:
     entry: pylint
     language: system
     types: [python]
-    args: [--disable=all, --enable=unused-import,trailing-whitespace, --score=y]
+    args: [--disable=all, --enable=unused-import,trailing-whitespace]

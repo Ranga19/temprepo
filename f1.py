@@ -8,14 +8,14 @@ class Author(models.Model):
     name = models.CharField(max_length=100)
     birth_date = models.DateField()
 
-class Book(models.Model): 
+class Book(models.Model):  
     """b"""
     title = models.CharField(max_length=100) 
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     publication_date = models.DateField()
-
+ 
 class AuthorSerializer(serializers.ModelSerializer):
-    """c""" 
+    """c"""  
     class Meta:
         model = Author 
         fields = '__all__'
