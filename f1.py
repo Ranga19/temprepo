@@ -1,4 +1,2 @@
-def helloworld(str):
-print(str)
-
-helloworld('hi ramadevi')
+def my_function():
+    print("Hello, world!")
