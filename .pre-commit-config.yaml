@@ -13,7 +13,7 @@ repos:
   hooks:
   - id: pylint
     name: pylint
-    entry: ./venv/Scripts/pylint
+    entry: pylint
     language: system
     types: [python]
-    args: [--ignore-patterns=venv]
+    args: [--disable=all, --enable=unused-import, "C:/Users/Ranganath/THIS/django/temp/venv/Scripts/pylint.exe"]
