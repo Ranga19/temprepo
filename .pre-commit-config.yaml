@@ -1,9 +1,0 @@
-repos:
-  - repo: local
-    hooks:
-      - id: pylint
-        name: pylint
-        entry: /home/ranganath/Desktop/marketplace/venv/bin/pylint
-        language: system
-        types: [python]
-        args: [--fail-under=6]
