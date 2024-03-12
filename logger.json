@@ -1,0 +1,8 @@
+{
+    "LOGS_PATH": "/home/services/logs/UMS",
+    "LOG_LEVEL": "DEBUG",
+    "LOGFILE_SIZE_IN_BYTES": 104857600,
+    "LOGFILE_COUNT": 10,
+    "ENABLE_APPLICATION_LOGS":1,
+    "ENABLE_AUDIT_LOG":1
+}
