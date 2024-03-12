@@ -6,3 +6,4 @@ repos:
         entry: /home/ranganath/Desktop/marketplace/venv/bin/pylint
         language: system
         types: [python]
+    minimum_pre_commit_configuration_score: 7
