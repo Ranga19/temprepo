@@ -1,6 +1,3 @@
-"""
-    f1 module
-"""
 import math
 from math import sin, cos
 
@@ -14,10 +11,16 @@ def calculate_circle_area(radius):
     else:
         area = math.pi * radius ** 2
         return area
+        pass
+
 
 def calculate_rectangle_area(length, width):
+    """
+        f
+    """
     area = length * width
     return area
+
 
 def main():
     radius = 5
