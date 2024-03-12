@@ -1,44 +1,36 @@
-from django.db import models
-from rest_framework import serializers, viewsets
+import math, os
 
-class Author(models.Model):
-    """
-    a
-    """
-    name = models.CharField(max_length=100)
-    birth_date = models.DateField()
+def calculate_square(x):
+    result= x*x
+    return result
 
-class Book(models.Model):   
-    """b"""
-    title = models.CharField(max_length=100)  
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    publication_date = models.DateField()
-  
-class AuthorSerializer(serializers.ModelSerializer):
-    """c"""  
-    class Meta:
-        model = Author 
-        fields = '__all__'
 
-class BookSerializer(serializers.ModelSerializer):
-    """c""" 
-    class Meta: 
-        model = Book
-        fields = '__all__'
+def calculate_circle_area(radius):
+    if radius <= 0:
+        return None
+    else:
+        area = math.pi * radius ** 2
+        return area
+        pass
 
-class AuthorViewSet(viewsets.ModelViewSet):
-    """d"""
-    queryset = Author.objects.all()
-    serializer_class = AuthorSerializer
+from math import pi, sin, cos
 
-    def get_queryset(self):
-        return Author.objects.filter(name__icontains=self.request.query_params.get('name', ''))
+def calculate_rectangle_area(length, width):
+    area = length * width
+    return area
 
-class BookViewSet(viewsets.ModelViewSet):
-    """e"""
-    queryset = Book.objects.all()
-    serializer_class = BookSerializer
 
-    def get_queryset(self):
-        return Book.objects.filter(author_id=self.request.query_params.get('author_id'))
+def main():
+    radius = 5
+    square = calculate_square(radius)
+    print("Square:", square)
     
+    rectangle_area = calculate_rectangle_area(4, 6)
+    print("Rectangle Area:", rectangle_area)
+    
+    print("Sin(30 degrees):", sin(math.radians(30)))
+    print("Cos(45 degrees):", cos(math.radians(45)))
+
+
+if __name__ == "__main__":
+    main()
