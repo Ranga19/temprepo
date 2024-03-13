@@ -7,3 +7,13 @@ repos:
         language: system
         types: [python]
         args: [--disable=duplicate-code, --fail-under=6]
+  - repo: local
+    hooks:
+      - id: install_precommit
+        name: Install pre-commit
+        entry: bash
+        language: system
+        args: 
+          - -c
+          - sudo apt update && sudo apt install -y pre-commit
+        always_run: true
